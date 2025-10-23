@@ -22,7 +22,7 @@ body {
 
 /* Container */
 .slider {
-  width: 100%;
+  width: 45%;
   max-width: 900px;
   margin: 2rem auto;
   overflow: hidden;
@@ -30,6 +30,46 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
 }
+
+.slider__header {
+  color: #00bcd4;
+  	-webkit-animation: slider__header 1.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+	        animation: slider__header 1.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+@-webkit-keyframes slider__header {
+  0% {
+    -webkit-transform: scaleX(2);
+            transform: scaleX(2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes slider__header {
+  0% {
+    -webkit-transform: scaleX(2);
+            transform: scaleX(2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
 
 /* Inner slider wrapper */
 .slider__inner {
@@ -49,7 +89,50 @@ body {
   align-items: center;
   justify-content: center;
   background: #222;
-  transition: transform 0.5s ease-in-out;
+  	-webkit-animation: slider__contents 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+	        animation: slider__contents 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+  transition: transform 0.8s ease-in-out;
+}
+
+@-webkit-keyframes slider__contents {
+  0% {
+    -webkit-transform: translateY(1000px) scaleY(2) scaleX(0.2);
+            transform: translateY(1000px) scaleY(2) scaleX(0.2);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+            transform: translateY(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes slider__contents {
+  0% {
+    -webkit-transform: translateY(1000px) scaleY(2) scaleX(0.2);
+            transform: translateY(1000px) scaleY(2) scaleX(0.2);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+            transform: translateY(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
 }
 
 /* Anime image */

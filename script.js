@@ -20,11 +20,16 @@ function displayArtwork(works, pagination) {
     // Clear existing content
     containerEl.innerHTML = "";
 
+    const header = document.createElement("h1");
+    header.classList.add("slider__header");
+    header.textContent = 'Anime SlideShow';
+
     // Create a container for the anime cards
     const sliderInner = document.createElement("div");
     sliderInner.classList.add("slider__inner");
 
     works.forEach(work => {
+
         const card = document.createElement("div");
         card.classList.add("slider__contents");
 
@@ -48,6 +53,7 @@ function displayArtwork(works, pagination) {
         sliderInner.appendChild(card);
     });
 
+    containerEl.appendChild(header);
     containerEl.appendChild(sliderInner);
 
     // Add pagination if available
@@ -63,4 +69,4 @@ function displayArtwork(works, pagination) {
 }
 
 // Call API
-getArtworks('https://api.jikan.moe/v4/top/anime?type=ona');
+getArtworks('https://api.jikan.moe/v4/seasons/2014/spring?sfw');
