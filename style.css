@@ -195,5 +195,10 @@ button {
 }
 
 button:hover {
-  background-color: #008c9e;
+  animation: button 1.5s infinite alternate;
+}
+
+@keyframes button {
+  from { box-shadow: 0 0 20px #00e5ff; }
+  to   { box-shadow: 0 0 40px #00c3ff, 0 0 60px #00e5ff; }
 }
